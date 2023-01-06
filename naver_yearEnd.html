@@ -4,9 +4,282 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>네이버 연말정산 2022 따라하기</title>
+    <title>2022 네이버 연말정산 페이지 구현하기</title>
+
+    <!-- meta tag -->
+    <!-- description : 웹 사이트에 대한 설명 -->
+    <meta name="description" content="데이터로 정리하는 한 해 2022 네이버 연말결산">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="2022 네이버 연말결산">
+    <meta property="og:description" content="나의 데이터로 정리하는 한 해">
+    <meta property="og:image" content="https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/og/main_1.png">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="2022 네이버 연말결산">
+    <meta name="twitter:description" content="나의 데이터로 정리하는 한 해">
+    <meta name="twitter:image" content="https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/og/main_1.png">
+
+
+    <!-- Open Gragh : 컨텐츠의 요약 내용이 SNS에 게시될 때, 최적화된 데이터를 가지고 갈 수 있도록 설정하는 것 _미리보기 화면을 생성해줌  -->
+    <!-- 아래는 기본적으로 설정해줘야 하는 og meta tag -->
+    <!-- <meta property="og:type" content="article">                               ___웹 사이트의 종류
+    <meta property="og:url" content="https://campaign.naver.com/2022-year-end/#">  ___웹 사이트의 주소
+    <meta property="og:title" content="2022 네이버 연말결산">                        ___웹 사이트의 제목
+    <meta property="og:image" content="https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/og/main_1.png">  ___웹 사이트를 공유했을 때 표시되는 이미지의 주소
+    <meta property="og:description" content="나의 데이터로 정리하는 한 해">           ___ 웹 사이트에 대한 설명
+    <meta property="og:site_name" content="네이버">
+    <meta property="og:locale" content="ko_KR">  ___웹 사이트의 언어 -->
+    <!-- 참고 출처 : https://velog.io/@byeol4001/Meta-Tag-OG%EC%98%A4%ED%94%88%EA%B7%B8%EB%9E%98%ED%94%84-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0 -->
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/resets.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/style-yearEnd.css">
+
+    <!-- 구조화된 데이터 제작을 위한 언어 형식 : JSON-LD 형식 (구글, 네이버에서 권장하는 방법) _페이지 헤드 또는 본문의 태그 내에 삽입되는 js 표기 -->
+    <!-- 검색 엔진의 관점에서는 구조화된 데이터를 참조하여 해당 페이지에서 다양한 정보를 수집하여 사용자에게 더욱 정확하고 풍부한 정보를 제공하게됨 -->
+    <!-- 참고 출처 : https://growthacking.kr/seo-%EA%B5%AC%EC%A1%B0%ED%99%94%EB%90%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/ -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "ItemList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "name": "2022 네이버 연말결산",
+                    "image": "https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/seo_v4/seo_01.png",
+                    "url": "https://campaign.naver.com/2022-year-end/#",
+                    "position": "1"
+                },
+                {
+                    "@type": "ListItem",
+                    "name": "한 장 정리",
+                    "image": "https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/seo_v4/seo_02.png",
+                    "url": "https://campaign.naver.com/2022-year-end/?a=my",
+                    "position": "2"
+                },
+                {
+                    "@type": "ListItem",
+                    "name": "키워드 퀴즈",
+                    "image": "https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/seo_v4/seo_03.png",
+                    "url": "https://campaign.naver.com/2022-year-end/?a=quiz",
+                    "position": "3"
+                },
+                {
+                    "@type": "ListItem",
+                    "name": "포인트 연말결산",
+                    "image": "https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/seo_v4/seo_04.png",
+                    "url": "https://campaign.naver.com/2022-year-end/?a=point",
+                    "position": "4"
+                },
+                {
+                    "@type": "ListItem",
+                    "name": "마이플레이스 연말결산",
+                    "image": "https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/seo_v4/seo_05.png",
+                    "url": "https://campaign.naver.com/2022-year-end/?a=myplace",
+                    "position": "5"
+                },
+                {
+                    "@type": "ListItem",
+                    "name": "블로그 연말결산",
+                    "image": "https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/seo_v4/seo_06.png",
+                    "url": "https://campaign.naver.com/2022-year-end/?a=blog",
+                    "position": "6"
+                },
+                {
+                    "@type": "ListItem",
+                    "name": "나의 웹툰 리포트",
+                    "image": "https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/seo_v4/seo_07.png",
+                    "url": "https://campaign.naver.com/2022-year-end/?a=webtoon",
+                    "position": "7"
+                },
+                {
+                    "@type": "ListItem",
+                    "name": "나의 시리즈 리포트",
+                    "image": "https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/seo_v4/seo_08.png",
+                    "url": "https://campaign.naver.com/2022-year-end/?a=series",
+                    "position": "8"
+                },
+                {
+                    "@type": "ListItem",
+                    "name": "VIBE REWIND",
+                    "image": "https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/seo_v4/seo_09.png",
+                    "url": "https://campaign.naver.com/2022-year-end/?a=vibe",
+                    "position": "9"
+                },
+                {
+                    "@type": "ListItem",
+                    "name": "엑스퍼트 3주년",
+                    "image": "https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/seo_v4/seo_11.png",
+                    "url": "https://campaign.naver.com/2022-year-end/?a=expert",
+                    "position": "10"
+                },
+                {
+                    "@type": "ListItem",
+                    "name": "연말북",
+                    "image": "https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/seo_v4/seo_12.png",
+                    "url": "https://campaign.naver.com/2022-year-end/?a=book",
+                    "position": "11"
+                },
+                {
+                    "@type": "ListItem",
+                    "name": "유의사항",
+                    "image": "https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/seo_v4/seo_13.png",
+                    "url": "https://campaign.naver.com/2022-year-end/?a=note",
+                    "position": "12"
+                }
+            ]
+        }
+    </script>
+    <script type="text/javascript" src="https://ssl.pstatic.net/spi/js/release/ko_KR/splugin.m.js"></script>
+    <!-- <script src="https://ssl.pstatic.net/spi/js/release/ko_KR/splugin.m.js"></script> -->
+    <!-- <script>와 <script type="text/javascript"> 의 차이 : 과거에는 javascript 외의 다른 script 언어들이 자주 사용되었기 때문에 브라우저가 js를 인식하게 하기 위해 'text 를 통해 스크립트를 구현하겠다'는 의미로 적어줌 -->
+    <!-- HTML5에서는 <script>의 type 디폴트가 text/javascript 로 지정되기 때문에 선언해 줄 필요 없음 -->
+    <!-- 마찬가지로 type="text/css" 지정 불필요 -->
+    <!-- 참고 출처 : https://rhammer.tistory.com/52 -->
+
+    <!-- <a> 안에 <span class="text"> 를 한 번 더 넣어주는 이유?! : 기능을 살리면서 의미를 전달하기 위해? 웹접근성? 스크린 리더기 때문인가?? 뭘까요?  -->
 </head>
+
 <body>
-    
+
+    <header id="header" class="fixed">
+        <div class="hd___inner">
+            <div class="logo__box">
+                <h1 class="logo">
+                    <a href="https://www.naver.com/">
+                        <span class="blind">Naver</span>
+                    </a>
+                </h1>
+                <strong class="title">2022 네이버 연말결산</strong>
+            </div>
+            <!-- //logo__box -->
+            <nav class="nav__menu">
+                <ul role="tablist" class="menu_list">
+                    <!-- 메뉴 클릭하면 aria-selected 를 true 로 적용하기 -->
+                    <li role="tab" aria-selected="false" class="menu_list_item">
+                        <a href="#dataSection"><span class="text">한 장 정리</span></a>
+                    </li>
+                    <li role="tab" aria-selected="false" class="menu_list_item">
+                        <a href="#keywordSection"><span class="text">100만 키워드</span></a>
+                    </li>
+                    <li role="tab" aria-selected="false" class="menu_list_item">
+                        <a href="#pointSection"><span class="text">포인트 결산</span></a>
+                    </li>
+                    <li role="tab" aria-selected="false" class="menu_list_item">
+                        <a href="#squareSection"><span class="text">블로그 리포트</span></a>
+                    </li>
+                    <li role="tab" aria-selected="false" class="menu_list_item">
+                        <a href="#bookSection"><span class="text">연말북</span></a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- //nav__menu -->
+            <div class="hd_btn__box">
+                <button type="button" name="button" class="btn_share"><span class="blind">공유하기</span></button>
+                <button type="button" name="button" class="btn_menu"><span class="blind">메뉴 열기</span></button>
+            </div>
+            <!-- //btn__box -->
+        </div>
+        <!-- //inner -->
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="mainSpot">
+            <div class="inner">
+                <div class="spot__box">
+                    <em>데이터로 정리하는 한 해</em>
+                    <div class="spot_title">
+                        <h2>
+                            <span class="blind">2022 네이버 연말결산</span>
+                        </h2>
+                        <i class="spot_title_icon graph"></i>
+                        <i class="spot_title_icon star"></i>
+                        <i class="spot_title_icon line"></i>
+                        <i class="spot_title_icon cursor"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //mainSpot -->
+
+        <section id="dataSection">
+            <div class="inner">
+                <div class="accounts__wrap">
+                    <em class="year_end_account">01.</em>
+                </div>
+                <!-- //accounts__wrap -->
+                <div class="title__box">
+                    <p class="title_sub">MY 데이터로 요약하는 2022</p>
+                    <!-- <br class=""> -->
+                    <h3 class="title_sec">2022<br>한 장 정리</h3>
+                </div>
+                <!-- //title__box -->
+                <div class="title__info">
+                    <p class="title_info_desc">
+                        쇼핑, 포인트, 뉴스, 플레이스까지 <br>
+                        올해 네이버 서비스에서 활동한 나의 데이터를 <br>
+                        한 장으로 요약해 드립니다.
+                    </p>
+                    <div class="count__info">
+                        <dl class="period">
+                            <dt>데이터 집계 : </dt>
+                            <dd>2022. 1. 1 - 2022. 11. 7</dd>
+                        </dl>
+                        <span class="standard">
+                            ( <a href="#"><span class="text">데이터 집계 기준</span></a> )
+                        </span>
+                    </div>
+                </div>
+                <!-- //title__info -->
+                <div class="graphic__area">
+                    <i class="icon01"><span class="blind">돋보기</span></i>
+                    <i class="icon02"><span class="blind">그래프</span></i>
+                    <i class="icon03"><span class="blind">페이퍼2</span></i>
+                </div>
+                <!-- //graphic__area -->
+                <div class="btn__area">
+                    <a href="#" class="btn check">
+                        <span class="text">지금 확인하기</span>
+                    </a>
+                </div>
+                <!-- //btn__area -->
+            </div>
+        </section>
+        <!-- //dataSection -->
+
+        <section id="keywordSection">
+            <div class="inner">
+
+            </div>
+        </section>
+        <!-- //keywordSection -->
+
+        <section id="pointSection">
+            <div class="inner">
+
+            </div>
+        </section>
+        <!-- //pointSection -->
+
+        <section id="squareSection">
+
+        </section>
+        <!-- //squareSection -->
+
+        <section id="bookSection">
+            <div class="inner">
+                
+            </div>
+        </section>
+        <!-- //bookSection -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer"></footer>
+    <!--  -->
 </body>
 </html>

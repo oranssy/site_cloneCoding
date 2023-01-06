@@ -1,0 +1,224 @@
+@charset "UTF-8";
+/* @charset "UTF-8"; 은 꼭 작성하지 않아도 작동하지만, CSS 속성에서 ASCII 문자를 사용할 때 유용하다고 함 */
+/* 참고 출처 : https://developer.mozilla.org/ko/docs/Web/CSS/@charset */
+
+/* ----- @import 방식으로 연결하는 방법 ----- */
+
+/* basic */
+/* @import "fonts.css";
+@import "resets.css";
+@import "common.css"; */
+
+/* section */
+/* @import "header.css";
+@import "mainSpot.css";
+@import "section1.css";
+@import "section2.css";
+@import "section3.css";
+@import "section4.css";
+@import "section5.css";
+@import "footer.css"; */
+
+
+/* ----- 연결 없이 css 파일 하나로 만들기 ----- */
+/* header */
+body {}
+#header {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(50px);
+    /* backdrop-filter : 요소의 뒷쪽 영역에 흐림 또는 색상 이동 등의 그래픽 효과를 줌.
+        <filter-function> values : 1) blur(2px)  2) brightness(60%)  3) contrast(40%) 
+                                   4) drop-shadow(4px 4px 10px blue)  5) grayscale(30%)  6) hue-rotate(120deg) 
+                                   7) invert(70%)  8) opacity(20%)  9) sepia(90%)  10) saturate(80%) */
+    z-index: 100;
+    padding: 23px 48px;
+    /* padding: 1.3% 2.5%; */
+}
+.hd___inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo__box {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    /* flex : 하나의 플렉스 아이템이 자신의 컨테이너가 차지하는 공간을 조절하는 방법을 설정함 
+              ( flex-grow 팽창 지수 : number 플렉스 아이템이 컨테이너 내부에서 할당 가능한 공간의 정도를 선언함
+                flex-shrink 수축 지수 : number 플렉스 아이템의 크기가 컨테이너 요소의 크기보다 클 때 사용, 설정한 아이템을 제외한 요소들의 비율
+                flex-basis 기본 크기 의 단축 속성 : px , % 플렉스 아이템의 초기 크기를 지정함 ) */
+}
+.logo__box .logo {}
+.logo__box .logo a {
+    display: inline-block;
+    background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_common_v2.png);
+    background-size: 294px 282px;
+    background-position: -266px -99px;
+    margin-right: 0.4vw;
+    width: 28px;
+    height: 28px;
+}
+.logo__box .title {
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: -0.2px;
+    padding-bottom: 8px;
+}
+.nav__menu {}
+.menu_list {
+    display: flex;
+    justify-content: space-between;
+}
+.menu_list_item {}
+.menu_list_item {
+    margin-right: 36px;
+}
+.menu_list_item:nth-child(5) {
+    margin-right: 100px;
+}
+.menu_list_item a {}
+.menu_list_item a .text {
+    font-weight: 700;
+}
+.menu_list_item a .text::before {
+    content: '';
+    display: inline-block;
+    background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_pc_v3.png);
+    background-size: 1241px 1124px;
+    background-position: -1130px -630px;
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    margin-right: 9px;
+}
+.menu_list_item a:hover .text::before {
+    display: inline-block;
+    background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_pc_v3.png);
+	background-size: 1241px 1124px;
+	background-position: -1130px -657px;
+	width: 22px;
+	height: 22px;
+}
+.hd_btn__box {}
+.btn_share {
+    background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_common_v2.png);
+    background-size: 294px 282px;
+    background-position: -153px -217px;
+    width: 28px;
+    height: 28px;
+}
+.btn_menu {
+    background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_common_v2.png);
+    background-size: 294px 282px;
+    background-position: -266px -132px;
+    width: 28px;
+    height: 28px;
+    margin-left: 16px;
+}
+.btn_menu {
+    /* display: none; */
+}
+
+
+/* mainSpot */
+#mainSpot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/pc_bg_spot_dot.png) no-repeat 0 0;
+    background-size: cover;
+    height: 90vh;
+    padding: 137px 0 226px;
+}
+.spot__box {}
+.spot__box em {
+    display: block;
+    text-align: center;
+    font-size: 27px;
+    font-weight: 700;
+}
+.spot_title {
+    background: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/pc_main_title.png) no-repeat 50% 0;
+    background-size: 733px 259px;
+    width: 733px;
+    height: 259px;
+    margin-top: 42px;
+    position: relative;
+}
+.spot_title_icon {
+    position: absolute;
+}
+.spot_title_icon.graph {
+    background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_pc_v3.png);
+    background-size: 1241px 1124px;
+    background-position: -544px -512px;
+    width: 120px;
+    height: 120px;
+    top: -15px;
+    left: 270.5px;
+    animation: graph 2s ease infinite;
+}
+@keyframes graph {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(362deg);
+	}
+}
+.spot_title_icon.star {
+    background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_pc_v3.png);
+    background-size: 1241px 1124px;
+    background-position: -1051px -457px;
+    width: 89px;
+    height: 89px;
+    top: 66px;
+    left: -73.5px;
+    animation: star 0.7s ease-in-out alternate infinite;
+}
+@keyframes star {
+	0% {
+		transform: rotate(0);
+		scale: 1;
+	}
+	100% {
+		transform: rotate(30deg);
+		scale: .9;
+	}
+}
+.spot_title_icon.line {
+    background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_pc_v3.png);
+    background-size: 1241px 1124px;
+    background-position: -375px -729px;
+    width: 120px;
+    height: 120px;
+    top: 45px;
+    right: -65.5px;
+}
+.spot_title_icon.cursor {
+    background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_pc_v3.png);
+    background-size: 1241px 1124px;
+    background-position: -669px -512px;
+    width: 120px;
+    height: 120px;
+    bottom: -62.5px;
+    right: -61.5px;
+    animation: mouse 1s ease alternate infinite;
+}
+@keyframes mouse {
+	0% {
+		transform: translate(0);
+	}
+	100% {
+		transform: translate(20%, 20%);
+	}
+}
+
+
+/* dataSection */
+#dataSection {
+    background-color: #f5f5f5;
+    border-top-right-radius: 20px;
+    /* position: absolute; */
+}

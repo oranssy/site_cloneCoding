@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022 네이버 연말정산 구현하기</title>
+
+    <!-- meta tag -->
+    <!-- 웹 사이트에 대한 설명 -->
+    <meta name="description" content="데이터로 정리하는 한 해 2022 네이버 연말결산">
+    <!-- Open Graph 웹 사이트의 종류 -->
+    <meta property="og:type" content="article">
+    <!-- Open Graph 웹 사이트의 제목 -->
+    <meta property="og:title" content="2022 네이버 연말결산"/>
+    <!-- Open Graph 오브젝트에 대한 설명 -->
+    <meta property="og:description" content="나의 데이터로 정리하는 한 해">
+    <!-- Open Graph 공유했을 때 표시되는 이미지의 URL -->
+    <meta property="og:image" content="https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/og/main_1.png"/>
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style-yearEnd.css">
+</head>
+
+<body>
+    <header id="header" class="fixed">
+        <h1 class="blind">2022 네이버 연말정산</h1>
+        <div class="logo__cont">
+            <a href="https://www.naver.com/">
+                <span class="blind">Naver</span>
+            </a>
+            <strong class="title">2022 네이버 연말결산</strong>
+        </div>
+        <!-- //logo__cont -->
+        <nav class="nav__menu">
+            <ul role="tablist" class="section__list">
+                <!-- 메뉴 클릭 시 aria-selected를 true로 적용하기 -->
+                <li role="tab" aria-selected="false">
+                    <a href="#section1"><span class="list-name">한 장 정리</span></a>
+                </li>
+                <li role="tab" aria-selected="false">
+                    <a href="#section2"><span class="list-name">100만 키워드</span></a>
+                </li>
+                <li role="tab" aria-selected="false">
+                    <a href="#section3"><span class="list-name">포인트 결산</span></a>
+                </li>
+                <li role="tab" aria-selected="false">
+                    <a href="#section4"><span class="list-name">블로그 리포트</span></a>
+                </li>
+                <li role="tab" aria-selected="false">
+                    <a href="#section5"><span class="list-name">연말북</span></a>
+                </li>
+            </ul>
+        </nav>
+        <!-- //nav__menu -->
+        <div class="button__cont">
+            <button type="button" name="button" class="btn-share"><span class="blind">공유하기</span></button>
+            <button type="button" name="button" class="btn-menu"><span class="blind">메뉴 열기</span></button>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="mainSpot">
+            <h2 class="blind">2022 네이버 연말결산</h2>
+            <div class="spot">
+                <div class="inner">
+                    <em>데이터로 정리하는 한 해</em>
+                    <div class="spot-box">
+                        <h3 class="spot-title">
+                            <span class="blind">2022 네이버 연말결산</span>
+                        </h3>
+						<i class="spot-title-icon graph"></i>
+						<i class="spot-title-icon star"></i>
+						<i class="spot-title-icon line"></i>
+						<i class="spot-title-icon cursor"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //mainSpot -->
+
+        <section id="section1">
+            <div class="data__cont">
+                <div class="inner">
+                    <div class="accounts-wrap">
+                        <em class="year_end_account">01.</em>
+                    </div>
+                    <!-- //accounts-wrap -->
+                    <div class="title-box">
+                        <p>MY 데이터로 요약하는 2022</p>
+                        <h3>2022<br>한 장 정리</h3>
+                    </div>
+                    <!-- //title-box -->
+                    <div class="title-info">
+                        <p class="title-info_desc">
+                            쇼핑, 포인트, 뉴스, 플레이스까지 <br>
+                            올해 네이버 서비스에서 활동한 나의 데이터를 <br>
+                            한 장으로 요약해 드립니다.
+                        </p>
+                        <div class="count-info">
+                            <p class="period">데이터 집계 : 2022. 1. 1 - 2022. 11. 7</p>
+                            <span class="standard">
+                                ( <a href="#"><span class="text">데이터 집계 기준</span></a> )
+                            </span>
+                        </div>
+                    </div>
+                    <!-- //title-info -->
+                    <div class="graphic-area">
+                        <i class="icon01"><span class="blind">돋보기</span></i>
+                        <i class="icon02"><span class="blind">그래프</span></i>
+                        <i class="icon03"><span class="blind">페이퍼2</span></i>
+                    </div>
+                    <!-- //graphic-area -->
+                    <div class="btn-area">
+                        <a href="#" class="btn check">
+                            <span class="text">지금 확인하기</span>
+                        </a>
+                    </div>
+                    <!-- //btn-area -->
+                </div>
+            </div>
+        </section>
+        <!-- //section1 -->
+
+        <section id="section2">
+            <div class="keyword__cont">
+                <div class="inner">
+                    <div class="accounts-wrap">
+                        <em class="year_end_account">02.</em>
+                    </div>
+                    <!-- //accounts-wrap -->
+                    <div class="title-box">
+                        <p>키워드로 돌아보는 2022</p>
+                        <h3>100만이 찾은<br><i class="search_icon"></i>키워드</h3>
+                    </div>
+                    <!-- //title-box -->
+                    <div class="title-info">
+                        <p class="title-info_desc">
+                            검색하고, 탐색하고, 나아갔던 <br>
+                            올 한해의 기록을 영상으로 돌아보세요
+                        </p>
+                        <div class="count-info">
+                            <p class="period">
+                                데이터 집계 : 2022. 1. 1 - 2022. 11. 7 <br>
+                                네이버 모바일 검색을 통해 인입된 키워드 중, 작년 비교 <br>
+                                QC 100만 이상 키워드
+                            </p>
+                            <span class="standard">
+                                ( <a href="#"><span class="text">데이터 집계 기준</span></a> )
+                            </span>
+                        </div>
+                    </div>
+                    <!-- //title-info -->
+                    <div class="video-wrap">
+                        <div class="video-wrap_inner">
+                            <iframe src="https://tv.naver.com/embed/31572528?autoPlay=true" frameborder='no' scrolling='no' marginwidth='0' marginheight='0' WIDTH='544' HEIGHT='306' allow='autoplay' allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <!-- //video-wrap -->
+                    <div class="btn-area">
+                        <a href="#" class="btn check">
+                            <span class="text">퀴즈 풀기</span>
+                        </a>
+                        <div class="text_balloon">
+                            <span class="text">영상 속에 힌트가 숨어있어요!</span>
+                            <span class="pointer"></span>
+                        </div>
+                    </div>
+                    <!-- //btn-area -->
+                    <div class="keyword-board">
+                        <ul class="keyword_line">
+
+                        </ul>
+                    </div>
+                    <!-- //keyword-board -->
+                </div>
+            </div>
+        </section>
+        <!-- //section2 -->
+
+        <section id="section3">
+            <div class="save__cont">
+                <div class="inner">
+                    <div class="accounts-wrap">
+                        <em class="year_end_account">03.</em>
+                    </div>
+                    <!-- //accounts-wrap -->
+                    <div class="title-box">
+                        <p>올해 난 얼마나 적립 받았을까?</p>
+                        <h3>2022 포인트<br><i class="bracket_lft"></i>연말결산<i class="bracket_rgt"></i></h3>
+                        <i class="underline"></i>
+                        <i class="coin_icon"></i>
+                    </div>
+                    <!-- //title-box -->
+                    <div class="title-info">
+                        <p class="title-info_desc">
+                            2022년 네이버에서 포인트 얼마나 받았지? 어디에 썼지?<br>
+							지금 확인하면 연말 보너스 선물의 행운이!
+                        </p>
+                    </div>
+                    <!-- //title-info -->
+                    <div class="image-area">
+                        <div class="coin01"></div>
+                        <div class="coin02"></div>
+                        <div class="coin03"></div>
+                        <div class="coin04"></div>
+                    </div>
+                    <!-- //image-area -->
+                    <div class="btn-area">
+                        <a href="#" class="btn check">
+                            <span class="text">지금 확인하기</span>
+                        </a>
+                    </div>
+                    <!-- //btn-area -->
+                </div>
+            </div>
+        </section>
+        <!-- //section3 -->
+
+        <section id="section4">
+            <div class="report__cont">
+                <div class="big-wrap">
+                    <div class="r_blog">
+                        <div class="inner">
+                            <div class="accounts-wrap">
+                                <em class="year_end_account">04.</em>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="r_vibe"></div>
+                    <div class="r_place"></div>
+                    <div class="r_expert"></div>
+                </div>
+                <!-- //big-wrap -->
+                <div class="mini-wrap">
+                    <div class="r_webtoon"></div>
+                    <div class="r_series"></div>
+                </div>
+                <!-- //mini-wrap -->
+            </div>
+        </section>
+        <!-- //section4 -->
+
+        <section id="section5"></section>
+        <!-- //section5 -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer"></footer>
+    <!-- //footer -->
+</body>
+</html>

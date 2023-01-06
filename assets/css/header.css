@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+/* header */
+#header {
+    padding: 25px 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(50px);
+    z-index: 200;
+}
+#header .fixed {
+    /* #header 에 넣어주면 width 값이 줄어든다?! 왜지?! */
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* logo__cont */
+.logo__cont {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.logo__cont a {
+    background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_common_v2.png);
+    background-size: 294px 282px;
+    background-position: -266px -99px;
+    display: inline-block;
+    margin-right: 9px;
+    width: 28px;
+    height: 28px;
+}
+.logo__cont .title {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+/* nav__menu */
+.nav__menu {}
+.section__list {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+}
+.section__list li {}
+.section__list li a {}
+.section__list li a .list-name {
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.56px;
+    margin-right: 30px;
+}
+.section__list li a .list-name::before {
+    background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_pc_v3.png);
+    background-size: 1241px 1124px;
+    background-position: -1130px -630px;
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 22px;
+    height: 22px;
+}
+.section__list li a:hover .list-name::before {
+	background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_pc_v3.png);
+	background-size: 1241px 1124px;
+	background-position: -1130px -657px;
+    display: inline-block;
+	width: 22px;
+	height: 22px;
+}
+
+/* button__cont */
+.button__cont {}
+.btn-share {
+    background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_common_v2.png);
+    background-size: 294px 282px;
+    background-position: -153px -217px;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+}
+.btn-menu {
+    background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_common_v2.png);
+    background-size: 294px 282px;
+    background-position: -266px -132px;
+    display: inline-block;
+    margin-left: 16px;
+    width: 28px;
+    height: 28px;
+}
+.btn-menu {
+    display: none;
+}

@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+/* section2 */
+#section2 {
+    position: relative;
+    padding: 25px 0 80px 0;
+    background-color: #ffe976;
+}
+#section2 .accounts-wrap {
+    background-color: #ffe976;
+}
+.title-box .search_icon {
+    position: absolute;
+    top: 42%;
+    left: 61%;
+    margin: -8px 5px 0 0;
+    background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_pc_v3.png);
+    -webkit-background-size: 1241px 1124px;
+    background-size: 1241px 1124px;
+    background-position: 0px -512px;
+    width: 414px;
+    height: 212px;
+}
+
+.video-wrap {
+    margin-top: 30px;
+}
+.video-wrap_inner {}
+.video-wrap_inner iframe {
+    width: 100%;
+    height: 100vh;
+}
+
+.text_balloon {
+    display: block;
+    position: relative;
+    margin: 15px 0;
+    /* margin: 15px auto 0; */
+    width: 256px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: #336dff;
+    text-align: center;
+}
+.text_balloon .text {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 32px;
+    letter-spacing: -0.3px;
+    color: #ffffff;
+}
+.text_balloon .pointer {
+    position: absolute;
+    top: -8px;
+    left: 120px;
+    width: 0;
+    height: 0;
+    border-color: #336dff transparent transparent;
+    border-style: solid;
+    border-width: 12px 8px 0;
+    transform: scaleY(-1);
+}

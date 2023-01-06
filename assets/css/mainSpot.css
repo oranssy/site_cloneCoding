@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+/* mainSpot */
+#mainSpot {}
+.spot {
+    /* position: relative; */
+    padding: 160px 0;
+    background: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/t1_bg_spot_dot.png) repeat 0 0;
+    background-size: 768px 1024px;
+}
+.spot .inner {
+    padding: 0 50px;
+}
+.spot .inner em {
+    display: block;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+.spot-box {
+    position: relative;
+}
+.spot-title {
+	margin: 0 auto;
+	margin-top: 50px;
+    width: 894px;
+    height: 316px;
+    background: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/pc2_main_title.png) no-repeat 50% 0;
+    background-size: 894px 316px;
+}
+.spot-title-icon {
+	position: absolute;
+	width: 1000px;
+}
+.spot-title-icon.graph {
+	background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_mo_v2.png);
+    background-size: 1259px 1186px;
+    background-position: -1037px -239px;
+    top: 10%;
+	left: 45%;
+	animation: graph 2s ease infinite;
+	background-position: -946px -852px;
+	width: 80px;
+	height: 80px;
+}
+@keyframes graph {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(362deg);
+	}
+}
+.spot-title-icon.star {
+	background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_mo_v2.png);
+    background-size: 1259px 1186px;
+    top: 34%;
+	left: 18%;
+	animation: star 0.7s ease-in-out alternate infinite;
+	background-position: -1152px -413px;
+	width: 60px;
+	height: 60px;
+}
+@keyframes star {
+	0% {
+		transform: rotate(0);
+		scale: 1;
+	}
+	100% {
+		transform: rotate(30deg);
+		scale: .9;
+	}
+}
+.spot-title-icon.line {
+	background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_mo_v2.png);
+    background-size: 1259px 1186px;
+	top: 27%;
+	left: 76%;
+	background-position: -1152px -85px;
+	width: 80px;
+	height: 80px;
+}
+.spot-title-icon.cursor {
+	background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_mo_v2.png);
+    background-size: 1259px 1186px;
+    bottom: -18%;
+	right: 19%;
+	animation: mouse 1s ease alternate infinite;
+	background-position: -1152px 0px;
+	width: 80px;
+	height: 80px;
+}
+@keyframes mouse {
+	0% {
+		transform: translate(0);
+	}
+	100% {
+		transform: translate(20%, 20%);
+	}
+}

@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+/* NanumSquareNeo */
+@font-face {
+	font-family: 'NanumSquareNeo';
+	src: local(NanumSquareLight);
+	src: url("https://campaign-cdn.pstatic.net/0/campaign/font/NanumSquareNeo/NanumSquareNeo-aLt.eot"), url("https://campaign-cdn.pstatic.net/0/campaign/font/NanumSquareNeo/NanumSquareNeo-aLt.woff") format("woff"), url("https://campaign-cdn.pstatic.net/0/campaign/font/NanumSquareNeo/NanumSquareNeo-aLt.otf") format("opentype");
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	src: local(NanumSquare);
+	src: url("https://campaign-cdn.pstatic.net/0/campaign/font/NanumSquareNeo/NanumSquareNeo-bRg.eot"), url("https://campaign-cdn.pstatic.net/0/campaign/font/NanumSquareNeo/NanumSquareNeo-bRg.woff") format("woff"), url("https://campaign-cdn.pstatic.net/0/campaign/font/NanumSquareNeo/NanumSquareNeo-bRg.otf") format("truetype");
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	src: local(NanumSquareBold);
+	src: url("https://campaign-cdn.pstatic.net/0/campaign/font/NanumSquareNeo/NanumSquareNeo-cBd.eot"), url("https://campaign-cdn.pstatic.net/0/campaign/font/NanumSquareNeo/NanumSquareNeo-cBd.woff") format("woff"), url("https://campaign-cdn.pstatic.net/0/campaign/font/NanumSquareNeo/NanumSquareNeo-cBd.otf") format("opentype");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	src: local(NanumSquareExtraBold);
+	src: url("https://campaign-cdn.pstatic.net/0/campaign/font/NanumSquareNeo/NanumSquareNeo-dEb.eot"), url("https://campaign-cdn.pstatic.net/0/campaign/font/NanumSquareNeo/NanumSquareNeo-dEb.woff") format("woff"), url("https://campaign-cdn.pstatic.net/0/campaign/font/NanumSquareNeo/NanumSquareNeo-dEb.otf") format("opentype");
+	font-weight: 800;
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	src: local(NanumSquareExtraBold);
+	src: url("https://campaign-cdn.pstatic.net/0/campaign/font/NanumSquareNeo/NanumSquareNeo-eHv.eot"), url("https://campaign-cdn.pstatic.net/0/campaign/font/NanumSquareNeo/NanumSquareNeo-eHv.woff") format("woff"), url("https://campaign-cdn.pstatic.net/0/campaign/font/NanumSquareNeo/NanumSquareNeo-eHv.otf") format("opentype");
+	font-weight: 900;
+}

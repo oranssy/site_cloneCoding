@@ -1,0 +1,207 @@
+@charset "UTF-8";
+/* @charset "UTF-8"; 은 꼭 작성하지 않아도 작동하지만, CSS 속성에서 ASCII 문자를 사용할 때 유용하다고 함 */
+/* 참고 출처 : https://developer.mozilla.org/ko/docs/Web/CSS/@charset */
+
+/* ----- 수업 시간때 사용했던 resets.css 내용에, 네이버 페이지에서 사용한 resets.css 내용을 추가하였음 ----- */
+
+
+/* 전체 여백 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* border-box 초기화 */
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: subpixel-antialiased;
+    /* -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-ms-user-select: none; */
+}
+*:focus {
+	outline: none;
+}
+body,
+html {
+	background-color: #ffffff;
+    width: 100%;
+	height: 100%;
+    -webkit-text-size-adjust: none;
+	text-size-adjust: none;
+	-webkit-overflow-scrolling: touch;
+}
+
+/* 요소 여백 초기화 */
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+legend,
+li,
+ol,
+p,
+select,
+table,
+td,
+textarea,
+th,
+ul,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+/* 링크 초기화 */
+a {
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
+}
+a:active,
+a:focus,
+a:hover {
+    text-decoration: none;
+	outline: none;
+    color: #111111;
+}
+
+/* 버튼 초기화 */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+/* 버튼 디자인 초기화 */
+button {
+	padding: 0;
+	border: none;
+	border: 0;
+	outline: none;
+	outline: 0;
+	background: none;
+	background-color: transparent;
+	-webkit-appearance: none;
+	appearance: none;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	cursor: pointer;
+}
+input,
+textarea,
+button,
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    font-size: 14px;
+}
+input,
+select {
+	vertical-align: middle;
+}
+fieldset {
+	border: 0;
+}
+
+/* 폰트 초기화 */
+body,
+button,
+input,
+select,
+table,
+textarea {
+    font-size: 14px;
+    line-height: 1;
+    color: #111111;
+    font-family: "NanumSquareNeo", -apple-system, "Malgun Gothic", "맑은 고딕",
+      BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+      "Open Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+textarea {
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	-webkit-appearance: none;
+	resize: none;
+}
+
+/* 가로모드 글씨 확대 초기화 */
+html {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+/* 스타일 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+th {
+    font-weight: normal;
+}
+ol,
+ul {
+    list-style: none;
+}
+li {
+	vertical-align: top;
+	list-style: none;
+}
+em,
+address {
+    font-style: normal;
+}
+strong {
+    font-weight: normal;
+}
+img,
+video {
+	border: 0;
+	vertical-align: top;
+    width: 100%;
+}
+
+table {
+    table-layout: fixed;
+	padding: 0;
+
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+table caption {
+	visibility: hidden;
+}
+

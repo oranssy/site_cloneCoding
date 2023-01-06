@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/* @charset "UTF-8"; 은 꼭 작성하지 않아도 작동하지만, CSS 속성에서 ASCII 문자를 사용할 때 유용하다고 함 */
+/* 참고 출처 : https://developer.mozilla.org/ko/docs/Web/CSS/@charset */
+
+/* 스킵 메뉴 */
+#skip {
+    z-index: 1;
+    position: relative;
+}
+#skip a {
+    display: inline-block;
+    padding: 15px 20px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--font-color);
+    font-family: var(--font-kor);
+    position: absolute;
+    left: -100vw;
+    top: 12vh;
+}
+#skip a:active,
+#skip a:focus {
+    left: 2vw;
+}
+
+/* blind (hidden) */
+.blind {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%); 
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+}
+/* blind 처리할 때, 포함되지 않게 해야하는 속성 : 화면 상의 영역을 지니지 않게 하는 속성 */
+/* 1) display: none;  
+   2) visiblity: hidden;  
+   3) font-size: 0;  
+   4) line-height: 0;  
+   5) width: 0;  
+   6) height: 0; */
+/* position: absolute; 와 top: -9999px; 로 처리하는 방법도 있으나, */
+/* 1) link 또는 form 의 경우 :focus 될 때 화면에 위치하지 않거나 정확한 위치 판단이 어렵고 */
+/* 2) 한글과 달리 오른쪽에서 왼쪽 방향으로 적는 언어(RTL)의 경우 문제가 되며 */
+/* 3) 스크린 리더기 중에서는 없는 영역으로 판단하고 스킵하고 넘어가는 경우도 있다 */
+/* 참고 출처 : https://fresh-mint.tistory.com/entry/CSS3-%EC%9B%B9%EC%A0%91%EA%B7%BC%EC%84%B1%EC%9D%84-%EA%B3%A0%EB%A0%A4%ED%95%9C-blindhidden-%EC%B2%98%EB%A6%AC */
+
+/* ir */
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+/* fixed */
+.fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+/* inner */
+.inner {
+    padding: 0 50px;
+}
+
+/* accounts__wrap */
+.accounts__wrap {
+    background-color: #f5f5f5;
+}
+.year_end_account {
+    /* position: absolute;
+    top: -60px;
+    left: 0;
+    padding-top: 30px;
+    width: 360px;
+    height: 60px;
+    border-radius: 0 12px 0 0; */
+}
+
+/* title__box */
+.title__box {}
+.title_sub {}
+.title_sec {}
